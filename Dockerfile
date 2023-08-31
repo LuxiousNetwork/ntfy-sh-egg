@@ -16,4 +16,4 @@ WORKDIR /home/container
 
 COPY server.yml server.yml
 
-ENTRYPOINT ["ntfy", "serve", "server.yml"]
+ENTRYPOINT ["ntfy", "serve", "--config", "server.yml"]
