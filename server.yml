@@ -1,0 +1,9 @@
+base-url: "http://ntfy.luxiousnetwork.com"
+upstream-base-url: "https://ntfy.sh"
+listen-http: ":8013"
+listen-https: ":8014"
+key-file: "/etc/letsencrypt/live/ntfy.luxiousnetwork.com.key"
+cert-file: "/etc/letsencrypt/live/ntfy.luxiousnetwork.com.crt"
+cache-file: "/var/cache/ntfy/cache.db"
+attachment-cache-dir: "/var/cache/ntfy/attachments"
+
