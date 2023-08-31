@@ -11,4 +11,6 @@ cd /home/container
 # Run the Server
 # ${MODIFIED_STARTUP}
 
+echo "Yay!"
+
 nfty serve
