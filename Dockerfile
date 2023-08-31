@@ -8,7 +8,6 @@ FROM binwiederhier/ntfy
 MAINTAINER KamikazeJAM, <kamikazejam.yt@gmail.com>
 
 COPY server.yml /etc/ntfy/server.yml
-ENTRYPOINT ["ntfy", "serve"]
 
 RUN adduser --disabled-password --home /home/container container
 
@@ -17,6 +16,7 @@ ENV  USER=container HOME=/home/container
 
 WORKDIR /home/container
 
-COPY ./entrypoint.sh /entrypoint.sh
+# COPY ./entrypoint.sh /entrypoint.sh
+# CMD ["/bin/bash", "/entrypoint.sh"]	
 
-CMD ["/bin/bash", "/entrypoint.sh"]	
+ENTRYPOINT ["ntfy", "serve"]
