@@ -12,7 +12,7 @@ RUN adduser --disabled-password --home /home/container container
 USER container
 ENV  USER=container HOME=/home/container
 
-COPY server.yml /home/container/server.yml
+COPY ./server.yml /home/container/server.yml
 
 WORKDIR /home/container
 
