@@ -1,0 +1,31 @@
+{
+    "_comment": "ntfy.sh Egg created by KamikazeJAM",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-10-17T16:15:08-07:00",
+    "name": "ntfy.sh",
+    "author": "luxiousnetwork@gmail.com",
+    "description": "ntfy.sh egg for ntfy.sh notifications",
+    "features": null,
+    "docker_images": {
+        "ghcr.io\/jake-moore\/ntfy-sh-luxious-egg:latest": "ghcr.io\/jake-moore\/ntfy-sh-luxious-egg:latest"
+    },
+    "file_denylist": [],
+    "startup": "ntfy serve",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"log level is INFO (tag=startup)\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "alpine:3.4",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": []
+}
