@@ -18,5 +18,5 @@ WORKDIR /home/container
 COPY ./server.yml /server.yml
 COPY ./entrypoint.sh /entrypoint.sh
 
-# Alphine Linux sh ?
-CMD ["sh", "/entrypoint.sh"]
+# Alphine Image
+CMD ["/bin/sh", "/entrypoint.sh"]
