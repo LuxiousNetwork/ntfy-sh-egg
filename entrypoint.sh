@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "entrypoint.sh"
 cd /home/container
 
 # Replace Startup Variables
