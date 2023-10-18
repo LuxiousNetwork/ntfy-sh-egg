@@ -28,8 +28,6 @@ WORKDIR /home/container
 COPY ./server.yml /server.yml
 COPY ./entrypoint.sh /entrypoint.sh
 
-RUN /entrypoint.sh
-
 # Alphine Image
-# CMD ["ls", "-a", "/bin"]
+CMD ["ls", "-a", "/bin"]
 #CMD ["/bin/bash", "/entrypoint.sh"]
