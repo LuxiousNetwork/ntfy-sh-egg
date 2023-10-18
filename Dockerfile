@@ -15,5 +15,6 @@ ENV  USER=container HOME=/home/container
 WORKDIR /home/container
 
 COPY ./server.yml /server.yml
+COPY ./entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["ntfy", "serve", "--config", "server.yml"]
+CMD ["/bin/bash", "/entrypoint.sh"]
