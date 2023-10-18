@@ -1,19 +1,19 @@
 {
-    "_comment": "ntfy.sh Egg created by KamikazeJAM",
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
     "meta": {
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2023-10-17T16:15:08-07:00",
+    "exported_at": "2023-10-17T18:48:39-07:00",
     "name": "ntfy.sh",
     "author": "luxiousnetwork@gmail.com",
-    "description": "ntfy.sh egg for ntfy.sh notifications",
+    "description": "ntfy.sh egg for LuxiousNetwork notifications",
     "features": null,
     "docker_images": {
         "ghcr.io\/jake-moore\/ntfy-sh-luxious-egg:latest": "ghcr.io\/jake-moore\/ntfy-sh-luxious-egg:latest"
     },
     "file_denylist": [],
-    "startup": "ntfy serve",
+    "startup": "ntfy serve --config server.yml",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"log level is INFO (tag=startup)\"\r\n}",
