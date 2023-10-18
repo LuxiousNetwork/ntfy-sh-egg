@@ -29,5 +29,6 @@ COPY ./server.yml /server.yml
 COPY ./entrypoint.sh /entrypoint.sh
 
 # Alphine Image
-CMD ["ls", "-a", "/bin"]
-#CMD ["/bin/bash", "/entrypoint.sh"]
+# CMD ["ls", "-a", "/bin"]
+ENTRYPOINT ["/bin/bash"]
+CMD ["/entrypoint.sh"]
