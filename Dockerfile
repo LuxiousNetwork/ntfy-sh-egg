@@ -5,15 +5,16 @@
 # ----------------------------------
 
 # Stage 1: Use a base image that uses APT package manager to install bash
-# FROM openjdk:8-jdk-alpine as builder
+FROM openjdk:8-jdk-alpine as builder
 # Install Bash 
-# RUN apk add --no-cache --update curl ca-certificates openssl git tar bash sqlite fontconfig
+RUN apk add --no-cache --update curl ca-certificates openssl git tar bash sqlite fontconfig
 
 # Stage 2: Rest of the script from ntfy
 FROM binwiederhier/ntfy
 
 # Copy the Bash binary from the builder stage to the final image
-# COPY --from=builder /bin/bash /bin/bash
+COPY --from=builder /bin/bash /bin/bash
+COPY --from=builder /bin/ls /bin/ls
 
 MAINTAINER KamikazeJAM, <kamikazejam.yt@gmail.com>
 
