@@ -5,19 +5,21 @@
 # ----------------------------------
 
 # Stage 1: Use a base image that uses APT package manager to install bash
-FROM debian:bullseye as builder
+FROM openjdk:8-jdk-alpine
+
 # Install Bash 
-RUN apt-get update && apt-get install -y bash
+# RUN apt-get update && apt-get install -y bash
 
 # Stage 2: Rest of the script from ntfy
-FROM binwiederhier/ntfy
+# FROM binwiederhier/ntfy
 
 # Copy the Bash binary from the builder stage to the final image
-COPY --from=builder /bin/bash /bin/bash
+# COPY --from=builder /bin/bash /bin/bash
 
 MAINTAINER KamikazeJAM, <kamikazejam.yt@gmail.com>
 
-RUN adduser --disabled-password --home /home/container container
+RUN apk add --no-cache --update curl ca-certificates openssl git tar bash sqlite fontconfig \
+    && adduser --disabled-password --home /home/container container
 
 USER container
 ENV  USER=container HOME=/home/container
