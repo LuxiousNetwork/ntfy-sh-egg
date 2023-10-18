@@ -5,16 +5,15 @@
 # ----------------------------------
 
 # Stage 1: Use a base image that uses APT package manager to install bash
-# FROM debian:bullseye as builder
+FROM openjdk:8-jdk-alpine as builder
 # Install Bash 
-# RUN apt-get update && apt-get install -y bash
+RUN apk add --no-cache --update curl ca-certificates openssl git tar bash sqlite fontconfig
 
 # Stage 2: Rest of the script from ntfy
-# FROM binwiederhier/ntfy
-FROM openjdk:8-jdk-alpine
+FROM binwiederhier/ntfy
 
 # Copy the Bash binary from the builder stage to the final image
-# COPY --from=builder /bin/bash /bin/bash
+COPY --from=builder /bin/bash /bin/bash
 
 MAINTAINER KamikazeJAM, <kamikazejam.yt@gmail.com>
 
