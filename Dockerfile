@@ -11,7 +11,7 @@
 
 # Stage 2: Rest of the script from ntfy
 # FROM binwiederhier/ntfy
-FROM FROM openjdk:8-jdk-alpine
+FROM openjdk:8-jdk-alpine
 
 # Copy the Bash binary from the builder stage to the final image
 # COPY --from=builder /bin/bash /bin/bash
