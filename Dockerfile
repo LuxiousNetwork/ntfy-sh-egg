@@ -3,6 +3,7 @@
 # Environment: Ntfy.Sh
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
+FROM openjdk:8-jdk-alpine
 FROM binwiederhier/ntfy
 
 MAINTAINER KamikazeJAM, <kamikazejam.yt@gmail.com>
