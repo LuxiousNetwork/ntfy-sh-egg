@@ -19,4 +19,4 @@ COPY ./server.yml /server.yml
 COPY ./entrypoint.sh /entrypoint.sh
 
 # Alphine Image
-CMD ["/bin/bash", "./entrypoint.sh"]
+CMD ["/entrypoint.sh"]
