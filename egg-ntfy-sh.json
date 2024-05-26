@@ -10,7 +10,7 @@
     "description": "ntfy.sh egg for LuxiousNetwork notifications",
     "features": null,
     "docker_images": {
-        "ghcr.io\/jake-moore\/ntfy-sh-luxious-egg:latest": "ghcr.io\/jake-moore\/ntfy-sh-luxious-egg:latest"
+        "ghcr.io\/jake-moore\/ntfy-sh-luxious-egg:latest": "ghcr.io\/luxiousnetwork\/ntfy-sh-egg:latest"
     },
     "file_denylist": [],
     "startup": "ntfy serve --config server.yml",
