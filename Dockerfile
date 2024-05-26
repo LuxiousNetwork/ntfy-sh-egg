@@ -15,7 +15,10 @@ ENV  USER=container HOME=/home/container
 
 WORKDIR /home/container
 
-COPY ./server.yml /server.yml
+# Copy server.yml to container files
+COPY ./server.yml /home/container/server.yml
+
+# Copy entrypoint.sh script for execution
 COPY ./entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/bin/bash"]
