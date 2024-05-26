@@ -78,7 +78,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/jake-moore/ntfy-sh-luxious-egg
+            ghcr.io/LuxiousNetwork/ntfy-sh-egg
           #labels: ${{ steps.meta.outputs.labels }}
           #cache-from: type=gha
           #cache-to: type=gha,mode=max
